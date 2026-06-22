@@ -2,7 +2,7 @@ from fastapi import FastAPI # type: ignore
 from dotenv import load_dotenv # type: ignore
 load_dotenv(".env")
 
-from routes import base
+from src.routes import base
 
 app = FastAPI()
 
