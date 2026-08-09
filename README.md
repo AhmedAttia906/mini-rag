@@ -2,7 +2,6 @@
 
 This is a minimal implementation of the RAG model for question answering.
 
-
 ## Requirements
 
 - Python 3.8 or later
@@ -40,6 +39,22 @@ $ cp .env.example .env
 ```
 
 Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
+
+## Run Docker Compose Services
+
+```bash
+$ sudo docker compose up -d
+$ cd docker
+$ cp .env.example .env
+```
+
+- update `.env` with your credentials
+
+
+
+```bash
+$ cd docker
+```
 
 ## Run the FastAPI server
 
