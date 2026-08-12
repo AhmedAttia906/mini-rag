@@ -115,13 +115,13 @@ async def process_endpoint(request: Request,
             asset_name=process_request.file_id
         )
 
-    if asset_record is None:
-        return JSONResponse(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            content={
-                "signal": ResponseSignal.FILE_ID_ERROR.value,
-            }
-        )
+        if asset_record is None:
+            return JSONResponse(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                content={
+                    "signal": ResponseSignal.FILE_ID_ERROR.value,
+                }
+            )
 
         project_files_ids = {
         asset_record.id: asset_record.asset_name
